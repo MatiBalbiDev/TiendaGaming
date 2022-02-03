@@ -1,11 +1,8 @@
 package com.tiendaGaming.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import java.util.List;
+
+import javax.persistence.*;
 
 import lombok.Data;
 
@@ -16,12 +13,16 @@ public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long idUsuario;
 	private String nombre;
 	private String apellido;
 	private String email;
 	private String telefono;
 	private String password;
+	
+	@OneToMany
+	@JoinColumn(name="id_usuario")
+	private List<Rol> roles;
 	
 	@Transient
 	private String confirm_password;
