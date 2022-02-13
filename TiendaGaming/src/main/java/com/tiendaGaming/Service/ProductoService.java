@@ -1,5 +1,8 @@
 package com.tiendaGaming.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +32,11 @@ public class ProductoService {
 		response.setPrecio(respuesta.getPrecio());
 		
 		return response;
+	}
+	
+	public List<Producto> productos(){
+		List<Producto> productos = new ArrayList<>();
+		productos = productoRepository.findAll();
+		return productos;
 	}
 }
