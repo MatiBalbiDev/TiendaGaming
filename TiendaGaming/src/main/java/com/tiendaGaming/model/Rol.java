@@ -3,11 +3,13 @@ package com.tiendaGaming.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 
@@ -21,11 +23,15 @@ public class Rol implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idRol;
+	private Long id_rol;
 	
-	@NotBlank
-	private String nombre;
+	@NotNull
+	@Enumerated(EnumType.STRING)
+	private ERol nombre;
 	
+	public Rol() {}
 	
-	
+	public Rol(ERol nombre) {
+	    this.nombre = nombre;
+	}
 }
