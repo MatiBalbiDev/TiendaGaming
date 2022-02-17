@@ -17,6 +17,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tiendaGaming.model.ERol;
@@ -32,7 +33,7 @@ import com.tiendaGaming.service.RolService;
 import com.tiendaGaming.service.UsuarioService;
 
 @RestController
-
+@RequestMapping("/")
 public class UsuarioController {
 	
 	@Autowired
