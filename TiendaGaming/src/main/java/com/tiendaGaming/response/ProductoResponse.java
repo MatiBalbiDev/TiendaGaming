@@ -1,4 +1,4 @@
-package com.tiendaGaming.Response;
+package com.tiendaGaming.response;
 
 import lombok.Data;
 
