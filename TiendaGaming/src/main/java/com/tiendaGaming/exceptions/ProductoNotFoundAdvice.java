@@ -1,4 +1,4 @@
-package com.tiendaGaming.Exceptions;
+package com.tiendaGaming.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

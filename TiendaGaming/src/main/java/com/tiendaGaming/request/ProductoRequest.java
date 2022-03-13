@@ -1,4 +1,4 @@
-package com.tiendaGaming.Request;
+package com.tiendaGaming.request;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.tiendaGaming.Request;
+package com.tiendaGaming.request;
 
 public class ProductoPutRequest extends ProductoRequest{
 	

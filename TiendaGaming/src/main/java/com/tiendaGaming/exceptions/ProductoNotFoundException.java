@@ -1,4 +1,4 @@
-package com.tiendaGaming.Exceptions;
+package com.tiendaGaming.exceptions;
 
 public class ProductoNotFoundException extends RuntimeException{
 	

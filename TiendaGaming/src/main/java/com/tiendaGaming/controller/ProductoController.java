@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tiendaGaming.Exceptions.ProductoNotFoundException;
-import com.tiendaGaming.Request.ProductoPutRequest;
-import com.tiendaGaming.Request.ProductoRequest;
-import com.tiendaGaming.Response.ProductoResponse;
-import com.tiendaGaming.Service.ProductoService;
+import com.tiendaGaming.exceptions.ProductoNotFoundException;
 import com.tiendaGaming.model.Producto;
+import com.tiendaGaming.request.ProductoPutRequest;
+import com.tiendaGaming.request.ProductoRequest;
+import com.tiendaGaming.response.ProductoResponse;
+import com.tiendaGaming.service.ProductoService;
 
 @RestController
 public class ProductoController {

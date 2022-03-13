@@ -1,4 +1,4 @@
-package com.tiendaGaming.Service;
+package com.tiendaGaming.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpStatusCodeException;
 
-import com.tiendaGaming.Request.ProductoPutRequest;
-import com.tiendaGaming.Request.ProductoRequest;
-import com.tiendaGaming.Response.ProductoResponse;
 import com.tiendaGaming.model.Producto;
 import com.tiendaGaming.repository.ProductoRepository;
+import com.tiendaGaming.request.ProductoPutRequest;
+import com.tiendaGaming.request.ProductoRequest;
+import com.tiendaGaming.response.ProductoResponse;
 
 @Service
 public class ProductoService {
