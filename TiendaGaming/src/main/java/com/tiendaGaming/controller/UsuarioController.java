@@ -68,7 +68,7 @@ public class UsuarioController {
 	
 	
 	@PostMapping("/signup")
-	public ResponseEntity<?> registrarUsuario(@Valid @RequestBody RegistroRequest registroRequest){
+	public ResponseEntity<MessageResponse> registrarUsuario(@Valid @RequestBody RegistroRequest registroRequest){
 		if(usuarioRepository.existsByNombreUsuario(registroRequest.getNombre())) {
 			return ResponseEntity.badRequest().body(new MessageResponse("Error: El nombre de usuario ya existe y/o esta utilizado"));
 		}
@@ -89,7 +89,7 @@ public class UsuarioController {
 
         usuarioService.save(usuario);
 
-        return new ResponseEntity<>(new MessageResponse("Usuario creado"), HttpStatus.CREATED);
+        return new ResponseEntity<MessageResponse>(new MessageResponse("Usuario creado"), HttpStatus.CREATED);
 	}
 	
 }
