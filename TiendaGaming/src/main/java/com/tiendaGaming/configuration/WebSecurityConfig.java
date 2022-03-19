@@ -35,7 +35,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		http.cors().and().csrf().disable().authorizeRequests().antMatchers("/**").permitAll().anyRequest()
+		http.cors().and().csrf().disable().authorizeRequests().antMatchers("/signin", "/signup", "/productos", "/producto/{id}").permitAll()
+				.antMatchers("/delete", "/putProducto", "/altaProducto").hasRole("ADMIN").anyRequest()
 				.authenticated().and()
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		http.addFilterAfter(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
